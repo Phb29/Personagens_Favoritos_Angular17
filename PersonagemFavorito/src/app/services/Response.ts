@@ -1,5 +1,4 @@
-export interface Response<T>{
-message?:string;
-data:T;
-
+export interface Response<T> {
+    message?: string;
+    data: T;
 }

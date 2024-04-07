@@ -1,15 +1,22 @@
-<form>
+<form (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
     <div class="form-group">
-        <label for="title">Titulo:</label>
-        <input type="text" placeholder="Título" required>
+        <label for="title">Anime ou personagem:</label>
+        <input type="text" placeholder="Nome" formControlName="title" required>
+        <div *ngIf="title.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="title.errors?.['required']">O nome é obrigatório!</p>
+        </div>
     </div>
+
     <div class="form-group">
-        <label for="description">Titulo:</label>
-        <textarea placeholder=" Por que é seu favorito?" required></textarea>
+        <label for="description">Descrição:</label>
+        <textarea placeholder=" Por que é seu favorito?" formControlName="description" required></textarea>
+        <div *ngIf=" description.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="title.errors?.['required']">A descrição é obrigatória!</p>
+        </div>
     </div>
     <div class="form-group">
         <label for="image">Coloque a imagem do seu anime ou personagem favorito</label>
-        <input type="file">
+        <input type="file" (change)="onFileSelected($event)">
     </div>
-<input type="submit" value="{{btnText}}">
+    <input type="submit"  value="{{btnText}}">
 </form>

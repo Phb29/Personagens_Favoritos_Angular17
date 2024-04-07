@@ -10,7 +10,7 @@ import { NewAnimeComponent } from './components/pages/new-anime/new-anime.compon
 import { AnimeFormComponent } from './components/anime-form/anime-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FormGroup, FormControl } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
- HttpClientModule
+ HttpClientModule,
+
   ],
   providers: [
     provideClientHydration()
