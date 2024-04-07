@@ -11,6 +11,8 @@ import { AnimeFormComponent } from './components/anime-form/anime-form.component
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FormGroup, FormControl } from '@angular/forms';
+import { MessagesComponent } from './component/messages/messages.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { FormGroup, FormControl } from '@angular/forms';
     HomeComponent,
     NewAnimeComponent,
     AnimeFormComponent,
+    MessagesComponent,
 
   ],
   imports: [
@@ -29,6 +32,7 @@ import { FormGroup, FormControl } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
  HttpClientModule,
+ FontAwesomeModule,
 
   ],
   providers: [

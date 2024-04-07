@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { Moment } from '../../Moments';
@@ -10,7 +10,7 @@ import { Moment } from '../../Moments';
   styleUrl: './anime-form.component.scss'
 })
 export class AnimeFormComponent implements OnInit {
-  @Output() onSubmit= new EventEmitter<Moment>()
+  @Output() onSubmit = new EventEmitter<Moment>()
   @Input() btnText!: string
 
   momentForm!: FormGroup
@@ -20,8 +20,9 @@ export class AnimeFormComponent implements OnInit {
       return;
     }
     console.log(this.momentForm.value)
-       
-this.onSubmit.emit(this.momentForm.value);
+
+    this.onSubmit.emit(this.momentForm.value);
+
   }
 
   ngOnInit(): void {
@@ -39,10 +40,10 @@ this.onSubmit.emit(this.momentForm.value);
   }
   get description() {
     return this.momentForm.get('description')!
- 
- }
-onFileSelected(event:any){
-const file:File = event.target.files[0];
-this.momentForm.patchValue({image:file})
-}
+
+  }
+  onFileSelected(event: any) {
+    const file: File = event.target.files[0];
+    this.momentForm.patchValue({ image: file })
+  }
 }
