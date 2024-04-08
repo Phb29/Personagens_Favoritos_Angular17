@@ -14,6 +14,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { MessagesComponent } from './component/messages/messages.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MomentComponent } from './componnts/pages/moment/moment.component';
+import { EditMomentComponent } from './components/pages/edit-moment/edit-moment.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MomentComponent } from './componnts/pages/moment/moment.component';
     AnimeFormComponent,
     MessagesComponent,
     MomentComponent,
+    EditMomentComponent,
 
   ],
   imports: [

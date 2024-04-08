@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, input } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { Moment } from '../../Moments';
@@ -12,8 +12,9 @@ import { Moment } from '../../Moments';
 export class AnimeFormComponent implements OnInit {
   @Output() onSubmit = new EventEmitter<Moment>()
   @Input() btnText!: string
-
+  @Input() momentData:Moment |null =null;
   momentForm!: FormGroup
+
   constructor() { }
   submit() {
     if (this.momentForm.invalid) {

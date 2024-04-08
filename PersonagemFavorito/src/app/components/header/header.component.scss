@@ -1,38 +1,47 @@
-.anime{
-width: 15%;
-position: relative;
-margin-right: 0.6em;
+.anime {
+    width: 45%;
+    position: relative;
+    margin-right: 0.6em;
 
 }
-nav{
-display: flex;
-justify-content: space-between;
-padding: 1em;
-border-bottom: 1px solid #777;
-}
-.brand ,.links{
-display: flex;
-justify-content: center;
-align-items: center;
-justify-content: start !important;
-}
-.brand h2{
-transition: .4s;
-}
-.brand:hover>h2{
-color:#dec129;
-}
-.links li{
-margin-right: 1em;
-list-style: none;
-}
-.links a{
-padding: 0.1em 0.3em;
-}
-#add{
-color:#dec129;
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    border-bottom: 1px solid #777;
 }
 
-#add a:hover{
-background-color: #efefef;
+.brand,
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: start !important;
+    font-size: 22px;
+}
+
+.brand h2 {
+    transition: .4s;
+}
+
+.brand:hover>h2 {
+    color: #8a2be2;
+}
+
+.links li {
+    margin-right: 1em;
+    list-style: none;
+}
+
+.links a {
+    padding: 0.1em 0.3em;
+}
+
+#add {
+    color: #8a2be2;
+}
+
+#add a:hover {
+    background-color: #efefef;
 }

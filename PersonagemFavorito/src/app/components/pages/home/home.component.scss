@@ -7,7 +7,14 @@
 
     .home-container h1 {
         margin-bottom: 0.5em;
+        font-size: 25px;
+        font-family: Times !important;
     }
+
+    h1 {
+        font-family: 'Poppins', sans-serif !important;
+    }
+
 
     .moments-container {
         display: flex;
@@ -41,7 +48,7 @@
     }
 
     a {
-        color: #dec129;
+        color: #8a2be2;
         padding: 0.3em 0.6em;
     }
 
@@ -70,4 +77,4 @@
         padding: 0.5em;
         width: 100%;
         text-align: center;
-    }   
+    }
