@@ -1,4 +1,5 @@
 <form (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
+    <input type="hidden" formControlName="id">
     <div class="form-group">
         <label for="title">Anime ou personagem:</label>
         <input type="text" placeholder="Nome" formControlName="title" required>
@@ -18,5 +19,5 @@
         <label for="image">Coloque a imagem do seu anime ou personagem favorito</label>
         <input type="file" (change)="onFileSelected($event)">
     </div>
-    <input type="submit"  value="{{btnText}}">
+    <input type="submit" value="{{btnText}}">
 </form>

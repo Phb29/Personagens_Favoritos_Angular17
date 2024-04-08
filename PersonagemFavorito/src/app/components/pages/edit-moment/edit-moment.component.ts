@@ -1,24 +1,39 @@
 import { Component, OnInit } from '@angular/core';
 import { MomentService } from '../../../services/moment.service';
 import { Moment } from '../../../Moments';
-import { ActivatedRoute } from '@angular/router';
-
+import { ActivatedRoute, Router } from '@angular/router';
+import { MessagesService } from '../../../services/messages.service';
 @Component({
   selector: 'app-edit-moment',
   templateUrl: './edit-moment.component.html',
   styleUrl: './edit-moment.component.scss'
 })
 export class EditMomentComponent implements OnInit {
-moment!:Moment;
-btnText:string='editar';
-  
-constructor(private momentService:MomentService,private route:ActivatedRoute ){}
-ngOnInit(): void {
-   const id=Number(this.route.snapshot.paramMap.get("id"))
+  moment!: Moment;
+  btnText: string = 'editar';
 
-this.momentService.getMoment(id).subscribe((item)=>{
-this.moment= item.data
-})
+  constructor(private momentService: MomentService, private route: ActivatedRoute,private messageService:MessagesService,private router:Router) { }
+  ngOnInit(): void {
+    const id = Number(this.route.snapshot.paramMap.get("id"))
+
+    this.momentService.getMoment(id).subscribe((item) => {
+      this.moment = item.data
+    })
   }
+  async editHandler(momentData: Moment) {
+    const id = this.moment.id
 
+    const formData = new FormData()
+    formData.append('title', momentData.title)
+    formData.append('description', momentData.description)
+
+if(momentData.image){
+    formData.append('image', momentData.image)
+}
+this.momentService.updateMoment(id!,formData).subscribe()
+
+this.messageService.add("Edição realizada com sucesso")
+
+this.router.navigate([''])
+  }
 }

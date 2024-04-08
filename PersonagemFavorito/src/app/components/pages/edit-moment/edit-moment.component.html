@@ -1,5 +1,5 @@
 <div *ngIf="moment">
 <h2>Editar Anime ou Persoagem</h2>
 
-<app-anime-form [momentData]="moment" [btnText]="btnText"> </app-anime-form>
+<app-anime-form (onSubmit)="editHandler($event)" [momentData]="moment" [btnText]="btnText"> </app-anime-form>
 </div>
