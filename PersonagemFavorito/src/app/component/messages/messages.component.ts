@@ -7,12 +7,13 @@ import { MessagesService } from '../../services/messages.service';
   styleUrl: './messages.component.scss'
 })
 export class MessagesComponent implements OnInit {
+
   faTimes = faTimes;
 
   constructor(public messagesService: MessagesService) { }
 
   ngOnInit(): void {
-    
-  }
 
+  }
+  
 }

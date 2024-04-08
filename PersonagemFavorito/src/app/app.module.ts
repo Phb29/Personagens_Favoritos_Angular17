@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormGroup, FormControl } from '@angular/forms';
 import { MessagesComponent } from './component/messages/messages.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MomentComponent } from './componnts/pages/moment/moment.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NewAnimeComponent,
     AnimeFormComponent,
     MessagesComponent,
+    MomentComponent,
 
   ],
   imports: [
